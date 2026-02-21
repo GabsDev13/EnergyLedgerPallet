@@ -1,6 +1,6 @@
 # Energy Oracle Solochain
 
-## 📌 About the Project
+## About the Project
 
 This is a standalone blockchain built with Substrate (Solochain).
 
@@ -10,12 +10,12 @@ The goal is to explore runtime logic development with FRAME, structured storage,
 
 ---
 
-## 🧩 Pallet Oracle
+## Pallet Oracle
 
 Location:
 pallets/oracle/src/lib.rs
 
-### 🎯 Objective
+### Objective
 
 Record energy variations (`delta_input`, `delta_output`) associated with:
 
@@ -26,7 +26,7 @@ Each record is unique by the combination of `network_id + timestamp`.
 
 ---
 
-## 🗄 Storage
+## Storage
 
 The pallet uses a `StorageDoubleMap`:
 
@@ -48,7 +48,7 @@ This model allows multiple independent networks, each with its temporal history.
 
 ---
 
-## 🚀 Dispatchables
+## Dispatchables
 
 ### submit_delta
 
@@ -73,7 +73,7 @@ TimestampAlreadyExists
 
 ---
 
-## 📢 Events
+## Events
 
 DeltaStored(
     network_id,
@@ -86,7 +86,7 @@ Emitted whenever a new delta is successfully stored.
 
 ---
 
-## ❌ Errors
+## Errors
 
 TimestampAlreadyExists
 
@@ -94,7 +94,7 @@ Prevents overwriting historical data that has already been recorded.
 
 ---
 
-## 🧪 Current Status
+## Current Status
 
 - Node compiles and runs
 - Pallet integrated into the runtime
@@ -105,7 +105,7 @@ Prevents overwriting historical data that has already been recorded.
 
 ---
 
-## 🚀 Running Locally
+## Running Locally
 
 Build:
 
@@ -121,7 +121,7 @@ ws://localhost:9944
 
 ---
 
-## 📂 Project Structure
+## Project Structure
 
 - node/ → Node implementation
 - runtime/ → Runtime configuration and pallet composition
@@ -129,7 +129,7 @@ ws://localhost:9944
 
 ---
 
-## 🛠 Technologies Used
+## Technologies Used
 
 - Rust
 - Substrate FRAME
