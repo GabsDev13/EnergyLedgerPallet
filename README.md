@@ -113,7 +113,7 @@ cargo build --release
 
 Run in development mode:
 
-./target/release/your-node --dev
+./target/release/solochain-template-node --dev
 
 Connect via Polkadot.js:
 
