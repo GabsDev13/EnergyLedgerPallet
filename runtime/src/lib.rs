@@ -1,3 +1,4 @@
+
 #![cfg_attr(not(feature = "std"), no_std)]
 
 #[cfg(feature = "std")]
@@ -183,6 +184,10 @@ pub type Executive = frame_executive::Executive<
 	Migrations,
 >;
 
+impl pallet_grid_oracle::Config for Runtime {
+    type RuntimeEvent = RuntimeEvent;
+}
+
 // Create the runtime by composing the FRAME pallets that were previously configured.
 #[frame_support::runtime]
 mod runtime {
@@ -225,4 +230,7 @@ mod runtime {
 	// Include the custom logic from the pallet-template in the runtime.
 	#[runtime::pallet_index(7)]
 	pub type Template = pallet_template;
+
+	#[runtime::pallet_index(8)]
+	pub type Oracle = pallet_grid_oracle;
 }

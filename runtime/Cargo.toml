@@ -27,6 +27,7 @@ pallet-balances.workspace = true
 pallet-grandpa.workspace = true
 pallet-sudo.workspace = true
 pallet-template.workspace = true
+pallet-grid-oracle = { path = "../pallets/oracle", default-features = false }
 pallet-timestamp.workspace = true
 pallet-transaction-payment-rpc-runtime-api.workspace = true
 pallet-transaction-payment.workspace = true
@@ -67,6 +68,7 @@ std = [
 	"pallet-grandpa/std",
 	"pallet-sudo/std",
 	"pallet-template/std",
+	"pallet-grid-oracle/std",
 	"pallet-timestamp/std",
 	"pallet-transaction-payment-rpc-runtime-api/std",
 	"pallet-transaction-payment/std",
